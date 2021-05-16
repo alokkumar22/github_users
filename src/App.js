@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SearchBox from "./SearchBox";
+import Users from "./Users";
 
-function App() {
+const App = () => {
+  const [userName, setUserName] = useState("");
+
+  const setUserNameFn = (userName) => {
+    console.log(userName);
+    setUserName(userName);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchBox setUserNameFn={setUserNameFn} />
+      <Users userName={userName} />
     </div>
   );
-}
+};
 
 export default App;

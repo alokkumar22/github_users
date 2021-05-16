@@ -1,0 +1,33 @@
+.modal {
+  padding: 0.4rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.4rem;
+  width: fit-content;
+  animation: fadeinout 3s ease-in-out forwards;
+  -webkit-animation: fadeinout 3s ease-in-out;
+  margin: 1rem auto;
+}
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+    background-color: white;
+  }
+  40%,
+  60% {
+    opacity: 1;
+    background-color: palevioletred;
+  }
+}
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+    background-color: white;
+  }
+  40%,
+  60% {
+    opacity: 1;
+    background-color: palevioletred;
+  }
+}
