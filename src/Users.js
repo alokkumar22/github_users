@@ -21,16 +21,9 @@ const Users = (props) => {
     });
   };
 
-  useEffect(() => {
-    if (showModal) {
-      const timerId = setTimeout(() => {
-        setShowModal(false);
-      }, 3000);
-      return () => {
-        clearTimeout(timerId);
-      };
-    }
-  }, [showModal]);
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     console.log(`useeffect ${props.userName}`);
@@ -68,7 +61,7 @@ const Users = (props) => {
   }
   return (
     <div>
-      {showModal && <Modal>Results</Modal>}
+      {showModal && <Modal closeModal={closeModal}>Results</Modal>}
       {users.map((user) => (
         <li key={user.id}>
           <img src={user.avatar_url} alt={user.name} />

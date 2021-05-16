@@ -3,9 +3,11 @@
   border: 1px solid lightgrey;
   border-radius: 0.4rem;
   width: fit-content;
-  animation: fadeinout 3s ease-in-out forwards;
+  position: fixed;
+  top: 2rem;
+  right: 50vw;
+  animation: fadeinout 3s ease-in-out;
   -webkit-animation: fadeinout 3s ease-in-out;
-  margin: 1rem auto;
 }
 @keyframes fadeinout {
   0%,
@@ -13,8 +15,8 @@
     opacity: 0;
     background-color: white;
   }
-  40%,
-  60% {
+  20%,
+  70% {
     opacity: 1;
     background-color: palevioletred;
   }
